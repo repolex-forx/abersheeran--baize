@@ -1,0 +1,11 @@
+{
+  "org": "abersheeran",
+  "repo": "baize",
+  "versions": [
+    {
+      "commit": "ecc675ea4d852c17c3e33bb580e61b30da90dc05",
+      "tag": "v0.23.1",
+      "parsed_at": "2026-10-19T12:53:00.282941+00:00"
+    }
+  ]
+}

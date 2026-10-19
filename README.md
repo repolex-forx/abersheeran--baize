@@ -1,1 +1,141 @@
-Initializing
+# Repolex Knowledge Graph of abersheeran/baize
+
+RDF knowledge graph data for [abersheeran/baize](https://github.com/abersheeran/baize), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download abersheeran/baize
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── ecc675ea4d852c17c3e33bb580e61b30da90dc05
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── ecc675ea4d852c17c3e33bb580e61b30da90dc05
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 00a9f9198c0e1282f99e60db3939fb94dfe0bb34.nq.gz
+│   ├── 022617865b4bd0c766214dca00883c68334a4510.nq.gz
+│   ├── 04cd4af7690017893fbcc0f1f7824b97d61fb173.nq.gz
+│   ├── 091ea6c98364bf17c29043deedc1cdf44d2714a0.nq.gz
+│   ├── 0ae178ccad1cda76ab8c649a3fd05ba81af06ec9.nq.gz
+│   ├── 0efe017ffb8bd17e649b1f90e78b87b12df91511.nq.gz
+│   ├── 13726766a64f423ce30b690b636eaf980a33c405.nq.gz
+│   ├── 14324c16fae7fa4b552fc96d0a9894d18238961a.nq.gz
+│   ├── 16cf954be067c818152bbdacd3835ffdd107a5e5.nq.gz
+│   ├── 176a458f94e0ea5272ce67c36bf30b6be9caf623.nq.gz
+│   ├── 1dbf6470b3935d8f834a6ae9d186fbdfc9abec7c.nq.gz
+│   ├── 21378e422d5a181b8479e6feb0a52f9c5dcbe76a.nq.gz
+│   ├── 250c3466699ff1f910168ba36b6edfbbda6c6b45.nq.gz
+│   ├── 35d8d8d3a257344c195a4d02bf50f9b55f4fd977.nq.gz
+│   ├── 3ad36169808181abdecbe3aad44131099d75a270.nq.gz
+│   ├── 3b0a06700095b3a0a539b5dd9250bea6901ee354.nq.gz
+│   ├── 3f39613d8ec812e001e53085a1f81ebf2bde5f17.nq.gz
+│   ├── 4056775cf4a25495e21b11d6019a130a1dc74186.nq.gz
+│   ├── 414e01a4b2804bec2c7b32f96b129dd6d7a08dfd.nq.gz
+│   ├── 455796cfdf4d2067cc1b6d03a93eb485e8cacccb.nq.gz
+│   ├── 463f5c38b1d18c7ad2ebf50e2c481777fe6f3f41.nq.gz
+│   ├── 48923987611b06343bdc619d2ab1f2eb64802567.nq.gz
+│   ├── 498b26e7e74833b22fdef9895e908fbf59545ee4.nq.gz
+│   ├── 4a0760db6cbcb3854f8fa2630b28d10cbd0598bf.nq.gz
+│   ├── 4eb301d0759ba444a3a6d53eb73a6e88a5027dc2.nq.gz
+│   ├── 534519ead63fe11d69afcce64e59db2f8a09412e.nq.gz
+│   ├── 5bcc22f2c273c921898048312037851e446e796c.nq.gz
+│   ├── 5e068d1031c5b60422fa31f01e0f210fa93c5ee4.nq.gz
+│   ├── 60ce10abfdff3a6f47ca96a82fb0eb4a6f7e2b5f.nq.gz
+│   ├── 67671b89df62b585605fa0c613da9d8121490cc4.nq.gz
+│   ├── 6b6f505f114823330c22c158ac50669655347847.nq.gz
+│   ├── 6d96a0c074f17101de38b468f511444dd0ec0475.nq.gz
+│   ├── 6e2f052e3093614e21d1e1d8123163434e197fba.nq.gz
+│   ├── 6ea13c839e5e766639b26a45b95197cede22e68f.nq.gz
+│   ├── 7924788c80d186099b54528f6b2c25d3af30af38.nq.gz
+│   ├── 87cc7e4999dfcb8e80b5dadcf4cd8d4a84a6f45d.nq.gz
+│   ├── 93de9bee16213d67e9d0705392655e29185c67ba.nq.gz
+│   ├── 9534b018135ed7d5caed6298980c55e8b1d2ec82.nq.gz
+│   ├── 95633a0f62bab655f4e9dd7b7e2d11ff13cc248c.nq.gz
+│   ├── 95a114d9520b1956e89f1e18884aebdb9c7b69d4.nq.gz
+│   ├── 99cdbb637503d7b2c86d1502141f589091de9705.nq.gz
+│   ├── 9ac815668983ca229ffe88f1e7c2626263ea5c8e.nq.gz
+│   ├── a31283d98fb2749404a7b0554fb4e525017a4a03.nq.gz
+│   ├── a33465bfa0f94b15e04bb069b8025f1f03840e23.nq.gz
+│   ├── b637cc8c25243987bef0b486fd40eb58b5a0fb9c.nq.gz
+│   ├── bb75486bba944e74849d827b84c65bc248e08e22.nq.gz
+│   ├── be48458f3aca3dc354aec4644bcd8bf13902628c.nq.gz
+│   ├── c0d2fd4cd3cd9cfee1577e5d97d2b367522d0cc5.nq.gz
+│   ├── c1a8f811d5da43c5cc873f11f3114a860b455005.nq.gz
+│   ├── c3b30b3c56f13442f0dc00122f4c8f374c0ac72e.nq.gz
+│   ├── cb72ab0bf373ee19fec60f6b0ed134194a7ce53d.nq.gz
+│   ├── d0c3cbf1020d5c292abdedf27627c6abe25e2293.nq.gz
+│   ├── d6200555815b7b090fdad3f63f1a619c1ce0ad6f.nq.gz
+│   ├── dc8a95ffd48b789eb76b38ede8711e785e2ce0dc.nq.gz
+│   ├── e310bc89c488a688a724341cf0d7721540bab3e1.nq.gz
+│   ├── e4a37eb4faa6d066581aa2dc3f30271a6a713c13.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e6a1d97bb48d6543cbb2042a89d5a4f7dbe7807b.nq.gz
+│   ├── eecfcb66c81ef49c3654982b2b9e5b7507524f07.nq.gz
+│   ├── f20507b29fb13a6990faf859d7b224650a3cf3be.nq.gz
+│   ├── f4c515cd8f5aec02865aa66de5aa104a56619f8f.nq.gz
+│   └── ffc7d1246abcc51a7c83e33294ea0248f337ed20.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── ecc675ea4d852c17c3e33bb580e61b30da90dc05.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 70 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[abersheeran/baize](https://github.com/abersheeran/baize)
+
+---
+*Parsed on 2026-10-19 by [repolex](https://repolex.ai)*
