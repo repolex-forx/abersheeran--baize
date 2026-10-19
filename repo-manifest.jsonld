@@ -8,7 +8,7 @@
     {
       "@id": "https://repolex.ai/r/abersheeran/baize/commit/ecc675ea4d852c17c3e33bb580e61b30da90dc05",
       "git:hexsha": "ecc675ea4d852c17c3e33bb580e61b30da90dc05",
-      "repolex:parseStatus": "metadata_complete",
+      "repolex:parseStatus": "ast_complete",
       "git:tagName": "v0.23.1"
     },
     {
